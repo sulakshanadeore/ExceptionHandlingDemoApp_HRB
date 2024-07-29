@@ -30,8 +30,7 @@ namespace ExceptionHandlingDemoApp
                         Console.WriteLine("Enter Customer id");
                         int custid = 1;
                         Console.WriteLine("Enter Name");
-                        string? name = null;
-
+                        string? name = Console.ReadLine(); //Ctrl+ Z +Enter Key
                         Customer c=new Customer(custid,name);
 
                         CustomerOperations custop = new CustomerOperations();
@@ -51,6 +50,7 @@ namespace ExceptionHandlingDemoApp
                     {
                         //inner
                         Console.WriteLine(zeroEx.Message);
+                        
                     }
                 
                 
