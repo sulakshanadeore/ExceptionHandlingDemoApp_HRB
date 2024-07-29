@@ -1,28 +1,33 @@
-﻿internal class Program
+﻿using ShoppingLibrary;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
         //       Console.WriteLine("Hello, World!");
 
         int sno, fno,ans;
-
+        Operations op=new Operations(); 
         try
         {
             Console.WriteLine("Etner a number");
             fno = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter a number");
             sno = Convert.ToInt32(Console.ReadLine());
-            if (sno == 0)
-            {
+            // op.Check(sno);
+            op.DoCalculation(fno, sno);
 
-                throw new DivideByZeroException("Denominator cannot be zero.. pls enter non zero input...");
+            //if (sno == 0)
+            //{
 
-            }
-            else
-            {
-                ans = fno / sno;
-                Console.WriteLine(ans);
-            }
+            //    throw new DivideByZeroException("Denominator cannot be zero.. pls enter non zero input...");
+
+            //}
+            //else
+            //{
+            //    ans = fno / sno;
+            //    Console.WriteLine(ans);
+            //}
         }
         catch (FormatException ex)
         {
