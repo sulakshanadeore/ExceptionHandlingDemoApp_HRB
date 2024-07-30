@@ -43,7 +43,7 @@ namespace ShoppingLibrary
 
 
 
-    public class Customer {
+    public  class Customer {
         public int CustID{ get;  set; }
         public string Name { get;  set; }
 
@@ -59,7 +59,7 @@ namespace ShoppingLibrary
         }
 
     }
-    public class CustomerOperations
+    public partial class CustomerOperations
     {
 
         static List<Customer> custList = new List<Customer>();
@@ -102,5 +102,8 @@ namespace ShoppingLibrary
             }
         
         }
+
+
+         partial void Calculate();
     }
 }
